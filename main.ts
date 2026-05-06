@@ -142,7 +142,7 @@ export default async function (req: Request): Promise<Response> {
     const resp = await fetch(u, {
       method: m,
       headers: h,
-      body: payload,
+      body: payload.buffer as ArrayBuffer,
       redirect: "manual",
     });
 
